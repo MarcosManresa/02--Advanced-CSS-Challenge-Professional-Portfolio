@@ -10,6 +10,11 @@
     --Illuminating: #F4DF4EFF;
     --Grey: rgb(211,211,211);
 }
+/*Added a scroll-behavior to general class html */
+html{
+    scroll-behavior: smooth;
+}
+
 /* Generalized Settings For all body's styling */
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
