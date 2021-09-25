@@ -1,38 +1,32 @@
+/* removed standard css styling */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
-
+/* Added a root psuedo-class for easier color re-selection */
 :root{
     --UltimateGray: rgb(40,40,43);
     --Illuminating: #F4DF4EFF;
     --Grey: rgb(211,211,211);
 }
-html{
-    scroll-behavior: smooth;
-}
-
+/* Generalized Settings For all body's styling */
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:var(--Illuminating);
     background-color: var(--UltimateGray);
 }
-
+/* The start of the header styling */
 header{
-    background-color: var(--UltimateGray);
     display:flex;
-    justify-content: space-between;
+    background-color: var(--UltimateGray);
     flex-wrap:wrap;
+    justify-content: space-between;
     padding:20px;
-    border: 5px solid var(--Illuminating)
 }
 header a{
-    padding-left:10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    text-decoration: none;
     border-bottom: 2px solid var(--Illuminating);
+    text-decoration: none;
     color:var(--Illuminating);
     
 }
@@ -43,132 +37,148 @@ header div{
 
 header h1{
     color: var(--Illuminating);
-    font-size: 40px;
-    font-weight: bold;
     padding: 10px;
-    background-color: rgb(72, 60, 50, 1);
+    font-weight: bold;
+    font-size: 40px;
     border: 5px, solid var(--Illuminating);
+    background-color: rgb(72, 60, 50, 1);
 }
 header nav ul{
-  display: flex; 
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  color:var(--Illuminating)
+   justify-content: center;
+   display: flex;
+   list-style: none; 
+   flex-wrap: wrap;
+   color:var(--Illuminating)
 }
-header nav ul li{
-  font-size: 1.8vw;
-  padding: 10px 15px;
-  margin-top: 5px;
+header nav{
+    margin:20px;
+}
+
+header nav ul li a{
+  font-size: 15px;
   margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 10px 15px;
   color:var(--Illuminating)
 }
+/* The end of the header styling */
+
+/* Added a general footer style so I can see it prior to reaching it */
 footer{
     background-color:var(--UltimateGray);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* Styling of the hero Section Start */
 .hero{
-    height:300px;
+    display: flex;
+    height:600px;
+    flex-direction: row; 
+    align-items: flex-end;
+    background-size: cover; 
     background-image: url("../image/city_buildings_sky_height_806_3840x2400.jpg");
     border-bottom-left-radius: 30px 30px; 
     border-bottom-right-radius: 30px 30px;
-    background-size: cover; 
-    background-position:  100% 13%; 
     background-attachment: fixed; 
-    display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row; 
-    align-items: flex-end;
     background-color: white;
  
 }
+/* Ending of the Hero styling section */
+
+/*Start of the navigation effects hover */
 .nav-effects a:hover{
+    border-radius: 15px;
     color:var(--Illuminating);
     font-weight: bold;
     text-shadow: 0px 0px 20px var(--Illuminating);
-    border-radius: 15px;
 }
+/* End of the Navigation effects hover */
+
+/* Styling of the utility class Start */
 .title-me{
+    text-align: right;
     border-right: 5px solid var(--Illuminating);
     min-height: 100%;
-    text-align: right;
-    padding-right: 40px;
     min-width: 20%;
+    padding-right: 40px;
     max-width: 20%;
 }
 
 .title-me h2{
-    font-size: 1.8vw;
+    font-size: 45px;
 }
+/* End of the Utility class editing /*
 
+/* About me section begins to start */
 .about-me{
     display:flex;
-    justify-content: space-between;
     align-items: stretch;
     padding-top: 30px;
     border: 5px solid var(--Illuminating);
+    justify-content: space-between;
     background-color: rgb(72,60,50,1);
 }
 .about-me p {
-    font-size: 1.8vw;
     padding: 0 30px;
-    line-height: 1.6;
     width: 90%;
+    line-height: 1.6;
+    font-size: 25px;
 }
+/* About me section comes to an end */
 
+/* my projects section begins */
 .my-project{
     padding: 30px 0;
-    display:flex;
     justify-content: space-between;
+    display:flex;
     
 }
 
 .projects-grid-wrap{
-    width: 80%;
-    height: 500px;
     display: flex;
+    width: 80%;
     justify-content: center;
+    height: 500px;
 }
 .project-grid{
     width: 70%;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4, 1fr);
+    display:grid;
     gap: 10px;
+    grid-template-columns: repeat(2,1fr);
 }
 .project{
+    background-size: cover;
     border: solid;
+    display:flex;
+    align-items: flex-end;
+    opacity: 0.5;
     border-color:rgb(72,60,50,1);
     color: var(--Illuminating);
-    display:flex;
     justify-content: flex-end;
-    align-items: flex-end;
     text-decoration: none;
-    background-size: cover;
     background-position: center;
-    opacity: 0.5;
 }
 .project:hover{
-    opacity: 1;
-    color:var(--Illuminating);
     font-weight: bold;
+    opacity: 1;
     text-shadow: 0px 0px 20px var(--Illuminating);
+    color:var(--Illuminating);
 }
 
 .run-buddy{
-    grid-column: 1/3;
-    grid-row: span 2;
     background-image: url("../image/io.PNG");
+    grid-row: span 2;
+    grid-column: 1/3;
 }
 .code-refractor{
     background-image: url("../image/dad.PNG");
-    background-position: 50% 15%;
+    background-position: 60% 50%;
 }
 .placeholder{
     background-image: url("../image/natural.jpg");
-    background-position: 60% 50%;
+    background-position: 50% 15%;
 }
 .placeholder3{
     background-image: url("../image/CODERED_B1_landscape_P2d_714x348.jpg.img.jpg");
@@ -176,99 +186,110 @@ footer{
 .placeholder2{
     background-image: url("../image/landscape-photography-12.jpg");
 }
+.label-project{
+    padding:10px;
+}
+/* My Projects Section comes to an end */
+
+/* Start of my contact section */
 footer{
     display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     padding-top:30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 30px;
     
 
 }
 .wrapper-content{
-    width:80%;
-    display:flex;
-    justify-content: center;
     align-items: center;
+    width:80%;
+    justify-content: center;
+    display:flex;
 }
 #list-contact{
     width:60%;
 }
-#contact{
-    height:140px;
-}
+
 
 footer ul{
     list-style:none;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    font-size:1.8vw;
     font-weight: bold;
+    display:flex;
+    align-content: center;
+    justify-content: space-evenly;
+    font-size:20px;
+    flex-wrap: wrap;
 }
 footer ul li{
     font-weight:bold;
-
 }
 footer ul li a{
-    text-decoration: none;
-    color:var(--Illuminating);
-    padding: 8px;
     font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    color:var(--Illuminating);
     border-bottom: 2px solid var(--Illuminating);
 }
 footer ul li a:hover{
-    text-shadow: 0px 0px 20px var(--Illuminating);
     border-radius: 15px;
+    text-shadow: 0px 0px 20px var(--Illuminating);
     
 }
+/* End of my contact section */
 
+/* Added a media Query for Tablets and smaller */
 @media screen and (max-width: 768px) {
-    .title h2{
-        font-size: 35px;
-    }
     .about-me p {
         font-size:16px;
+        padding: 0 15px;
         line-height: 1.6;
     }
-}
 
+    .title h2{
+        font-size: 35px;
+    
+    }
+}
+/* End of Media Query for Tablets and Smaller */
+
+/* Start of Media Query for Phone sizes and smaller */
 @media screen and (max-width: 575px) {
+    header nav ul{
+        min-height: 80px;
+    }
     header{
         justify-content: center;
         padding:20px;
     }
-    header nav ul{
-        min-height: 80px;
-    }
+    
     .hero{
-        flex-direction: column;
-    }
-    .about-me{
         flex-direction: column;
     }
     .title-me{
         border-bottom: 5px solid var(--Illuminating);
         border-right:none;
+        max-width: 100%;
         text-align: center;
         min-width: 100%;
-        max-width: 100%;
         padding: 0;
     }
-    .about-me p{
-        font-size: 16px;
-        line-height: 1.6;
-        width: 100%;
-        padding: 15px;
-    }
-    .my-project{
+    .about-me{
         flex-direction: column;
-        padding: 30px 0;
+    }
+    .about-me p{
+        padding: 15px;
+        font-size: 16px;
+        width: 100%;
+        line-height: 1.6;
     }
     .projects-grid-wrap{
         width:100%;
         padding: 10px;
+    }
+    .my-project{
+        flex-direction: column;
+        padding: 30px 0;
     }
     .project-grid{
         width:80%;
@@ -279,11 +300,12 @@ footer ul li a:hover{
     footer ul{
         flex-direction: column;
     }
+    footer ul li {
+        text-align: center;
+        padding: 10px;
+    }
     .wrapper-content{
         width:100%
     }
-    footer ul li {
-        padding: 10px;
-        text-align: center;
-    }
 }
+/* End of Media Query for Phone sizes and smaller */
